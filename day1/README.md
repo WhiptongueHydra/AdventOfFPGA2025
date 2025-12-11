@@ -6,7 +6,7 @@ https://adventofcode.com/2025/day/1
 
     sed -i 's/R/+/g' instructions.txt
   
-    sed -i 's/R/+/g' instructions.txt
+    sed -i 's/L/-/g' instructions.txt
 
 - I was also going to cycle through the file to count the number of instructions and use this to populate the generics for it all to be nice and automated, but this was a ballache also so just did:
 
