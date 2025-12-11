@@ -5,6 +5,7 @@ use ieee.numeric_std.all;
 use std.textio.all;
 use ieee.std_logic_textio.all;
 
+
 entity aoc1Adder_tb is
 end entity aoc1Adder_tb;
 
@@ -35,7 +36,6 @@ begin
       result => result
     );
 
-
   clkproc: process
   begin
     while simDone = '0' loop
@@ -45,8 +45,7 @@ begin
     report "Simulation finished.";
     wait;
   end process clkproc;
-  
-  
+    
   stimproc: process
     file datafile:    text open read_mode is "placeholder.txt";
     variable instr:   line;
@@ -61,6 +60,5 @@ begin
     simDone <= '1';
     wait;
   end process stimproc;
-
 end architecture A1;
 
