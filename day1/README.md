@@ -1,7 +1,7 @@
 # This days challenge
 https://adventofcode.com/2025/day/1
 
-## Note on 'cheating'
+## Note on cheating
 - I was going to open the raw instruction file in VHDL, convert all R's -> +'s and L's to -'s so they can be treated as integers, but I got fed up fucking about with file IO stuff and just cleaned the file with:
 
     sed -i 's/R/+/g' instructions.txt
