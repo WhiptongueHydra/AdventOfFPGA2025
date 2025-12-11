@@ -59,11 +59,14 @@ architecture sim of aoc1TB is
   signal simDone:   std_logic := '0';
   signal loadDone:  std_logic := '0';
   
+  -- Set value here
+  constant numInstructions: integer := 4780;
+  
 begin
   -- Instantiate memory, adder, and zero counter
   mem: aoc1Mem 
     generic map (
-      numInstructions => 4780
+      numInstructions => numInstructions
     )
     port map (
       clk => clk,
@@ -82,7 +85,7 @@ begin
     
   counter: aoc1ZCounter
     generic map (
-      numInstructions => 4780
+      numInstructions => numInstructions
     )
     port map (
       clk => clk,
@@ -96,14 +99,14 @@ begin
       clk <= not clk;
       wait for T/2;
     end loop;
-    report "Password: " & integer'image(passwd-1); -- Started at 1 for some reason couldnt be assed fixing
+    report "Password: " & integer'image(passwd-1); -- Started at 1 for some reason
     wait;
   end process clk_proc; 
   
   
   -- Swap with relative path 
   memLoad: process 
-    file inst_file: text open read_mode is "placerholder.txt";
+    file inst_file: text open read_mode is "placeholder.txt";
     variable inst_line: line;
     variable num:       integer range -1000 to 1000;
     variable addrVar:   unsigned(15 downto 0);
@@ -143,7 +146,7 @@ begin
     report "Dumping memory into adder";
     wait until loadDone = '1';
       we <= '0';
-      for i in 0 to 4780 loop
+      for i in 0 to numInstructions loop
         wait until falling_edge(clk);
         addr <= to_unsigned(i, 16);
         wait until rising_edge(clk);
