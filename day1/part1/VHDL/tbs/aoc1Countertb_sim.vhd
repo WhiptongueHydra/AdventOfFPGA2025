@@ -2,6 +2,7 @@ library ieee;
 use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 
+
 entity aoc1CounterTB is
 end entity aoc1CounterTB;
 
@@ -23,8 +24,7 @@ architecture sim of aoc1CounterTB is
     signal clk: std_logic := '0';
     signal inSum: integer range 0 to 99;
     signal passwd: integer;
-       
- 
+        
 begin
   dut: aoc1ZCounter
     port map (
@@ -55,6 +55,5 @@ begin
     simDone <= '1';
     wait;
   end process stimproc;    
-
 end architecture sim;
 
