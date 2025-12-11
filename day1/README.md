@@ -11,6 +11,6 @@ https://adventofcode.com/2025/day/1
 
 - I was also going to cycle through the file to count the number of instructions and use this to populate the generics for it all to be nice and automated, but this was a ballache also so just did:
 
-    wc -l instructions.txt
+    ```wc -l instructions.txt```
 
   and input the number it spat out to a constant in the final TB which populates generics. So not completely hardcoded but not as smooth as I imagined.
