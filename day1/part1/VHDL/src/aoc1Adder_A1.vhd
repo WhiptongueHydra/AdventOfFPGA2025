@@ -3,6 +3,7 @@ use ieee.std_logic_1164.all;
 use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 
+
 entity aoc1Adder is
   port (
     clk:  in std_logic;
