@@ -1,7 +1,7 @@
 # Solution Design
 General block design. 
 
-<img width="429" height="543" alt="image" src="https://github.com/user-attachments/assets/91cb4c2e-d2c0-49db-9dea-cf059b0385f2" />
+            <img width="429" height="543" alt="image" src="https://github.com/user-attachments/assets/91cb4c2e-d2c0-49db-9dea-cf059b0385f2" />
 
 - Testbench fills memory with the instructions as signed values
 - Probes with addresses once full
