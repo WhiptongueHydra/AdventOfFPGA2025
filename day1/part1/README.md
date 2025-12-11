@@ -3,7 +3,7 @@ General block design.
 
 <img width="429" height="543" alt="image" src="https://github.com/user-attachments/assets/91cb4c2e-d2c0-49db-9dea-cf059b0385f2" />
 
-- TB fills memory with the instructions as signed values
+- Testbench fills memory with the instructions as signed values
 - Probes with addresses once full
 - Address causes instruction to be dumped into adder input 2
   - Hundred digit irrelevant to operation, since every sweep > 100 is just a circle
