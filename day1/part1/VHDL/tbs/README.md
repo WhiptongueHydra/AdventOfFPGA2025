@@ -1,4 +1,4 @@
-# VHDL Testbenches AoC Day 1
+# Testbenches
 ## aoc1Adder_tb.vhd
 Testbench for the adder component
 ## aoc1Countertb_sim.vhd
